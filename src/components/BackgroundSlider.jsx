@@ -10,7 +10,8 @@ function BackgroundSlider({ nextClick }) {
   }, [nextClick]);
 
   return (
-    <div className="fixed inset-0 -z-10">
+    <div className="fixed inset-0 z-0 h-[100dvh] w-full overflow-hidden">
+      
       <img
         src={
           imageIndex === 0
@@ -19,6 +20,8 @@ function BackgroundSlider({ nextClick }) {
         }
         alt=""
         className="
+          absolute
+          inset-0
           h-full
           w-full
           object-cover
@@ -28,9 +31,32 @@ function BackgroundSlider({ nextClick }) {
         "
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/75" />
+      {/* Dark overlay */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-b
+          from-black/20
+          via-transparent
+          to-black/75
+        "
+      />
 
-      <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/70 via-red-950/15 to-transparent" />
+      {/* Bottom shade */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          right-0
+          h-[45%]
+          bg-gradient-to-t
+          from-black/70
+          via-red-950/15
+          to-transparent
+        "
+      />
     </div>
   );
 }

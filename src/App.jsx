@@ -272,7 +272,7 @@ function App() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+   <main className="relative z-10 min-h-[100dvh] overflow-hidden bg-black text-white">
       {/* =========================
           TRACTOR BACKGROUND
       ========================= */}
